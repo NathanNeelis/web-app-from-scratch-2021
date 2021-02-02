@@ -2,7 +2,7 @@
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 ### View the app
-:earth_americas: [live website](https://nathanneelis.github.io/web-app-from-scratch-2021/)
+:earth_americas:  [live website](https://nathanneelis.github.io/web-app-from-scratch-2021/)
 
 <!-- ☝️ replace this description with a description of your own work -->
 ### Description
@@ -66,7 +66,7 @@ Find a movie to your liking, and make some popcorn instead of spending minutes t
 
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
 ### Project status 
-* ✅ Concept idea  
+* ✅  Concept idea  
 * ✅ Finding API  
 * ✅ Learning API from documentation  
 * ✅ Fetcing data from API  
