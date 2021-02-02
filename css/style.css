@@ -5,6 +5,63 @@
     padding: 0;
 }
 
-p {
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: 'Dosis', sans-serif;
+}
+
+main {
+    max-width: 50rem;
+    margin: 1em auto;
+}
+
+.topTwenty {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: lightblue;
+    margin: 1em auto;
+    border-radius: .5em;
+}
+
+.movie {
+    /* width: 40%; */
+    height: 100%;
+    padding: 1em;
+    margin: 1em;
+    background-color: aliceblue;
+    border-radius: .3em;
+    color: darkgray;
+}
+
+.movie-zoom {
+    /* width: 100%; */
+    overflow: hidden;
+}
+
+.movie-zoom img {
+    transition: transform 1.5s, filter 1s ease-in-out;
+    transform-origin: center center;
+    filter: brightness(70%);
+}
+
+.movie-zoom img:hover {
+    filter: brightness(100%);
+    transform: scale(1.1);
+}
+
+.movie h4 {
+    text-align: center;
+    margin-top: .3em;
+    font-weight: 600;
+}
+
+.movie:hover {
+    color: gray;
+    background-color: white;
 }
