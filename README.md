@@ -45,10 +45,6 @@ Find a movie to your liking, and make some popcorn instead of spending minutes t
     npm install
     ```  
 
-4. optional: fetch the data  
-    ```bash
-    node fetch_NPR.js
-    ```  
 
 #### Download as zip
 1. Go to the URL below and it will download the zip automatically  
@@ -82,3 +78,5 @@ ratelimets..
 <!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
 ### License
 [MIT](https://github.com/NathanNeelis/web-app-from-scratch-2021/blob/master/LICENSE)  
+
+### Resources
