@@ -1,5 +1,3 @@
-## readme 
-
 <!-- Add a link to your live demo in Github Pages 🌐-->
 ### View the app
 :earth_americas:  [live website](https://nathanneelis.github.io/web-app-from-scratch-2021/)
@@ -16,7 +14,7 @@ Find a movie to your liking, and make some popcorn instead of spending minutes t
 
 
 <!-- Maybe a table of contents here? 📚 -->
-## Table of Contents
+### Table of Contents
 [Description]()  
 [Getting started]()  
 [Features]()  
@@ -80,3 +78,4 @@ Find a movie to your liking, and make some popcorn instead of spending minutes t
 
 
 <!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+### License
