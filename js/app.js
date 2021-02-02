@@ -24,21 +24,18 @@ async function makeContent() {
             // function(s) to transform data  
             let resultsPageOne = data.results;
             let cleanObject = filterObject(resultsPageOne)
-            let topTwentyTitles = filterData(cleanObject, 'title')
-            let topTwentyImages = filterData(cleanObject, 'poster_path')
+            // let topTwentyTitles = filterData(cleanObject, 'title')
+            // let topTwentyImages = filterData(cleanObject, 'poster_path')
 
 
             // console logs
             console.log('Incoming data', data)
             console.log('results page 1', resultsPageOne)
-            // console.log('top 20 movie titles', topTwentyTitles)
-            // console.log('poster paths', topTwentyImages)
             console.log('new object', cleanObject)
 
 
             // function(s) to render data
             arrayToHtml(cleanObject)
-
 
         });
 }
@@ -88,7 +85,7 @@ function arrayToHtml(data) {
 
 // Resource: https://stackoverflow.com/questions/5886144/create-divs-from-array-elements 
 
-// returns new object with city name, capacity and description in it.
+// creates a new object with the data I want, so I dont have to much data that I wont be using
 function filterObject(results) {
     let items = results.map((results) => {
         return {
