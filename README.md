@@ -67,17 +67,18 @@ ratelimets..
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
 ### Project status 
 * ✅  Concept idea  
-* ✅ Finding API  
-* ✅ Learning API from documentation  
-* ✅ Fetcing data from API  
-* ✅ Render HTML elements from API data  
-* ✅ Quick page styling so the data is readable  
+* ✅  Finding API  
+* ✅  Learning API from documentation  
+* ✅  Fetcing data from API  
+* ✅  Render HTML elements from API data  
+* ✅  Quick page styling so the data is readable  
   
-* ❌ Searchbar for movie  
-* ❌ Detail page  
-* ❌ Modulair coding  
-* ❌ templating  
+* ❌  Searchbar for movie  
+* ❌  Detail page  
+* ❌  Modulair coding  
+* ❌  templating  
 
 
 <!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
 ### License
+[MIT](https://github.com/NathanNeelis/web-app-from-scratch-2021/blob/master/LICENSE)  
