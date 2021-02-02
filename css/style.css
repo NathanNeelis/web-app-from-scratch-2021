@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: 'Dosis', sans-serif;
+}
