@@ -30,8 +30,8 @@ main {
 }
 
 .movie {
-    /* width: 40%; */
-    height: 100%;
+    width: 14em;
+    /* height: 24.5em; */
     padding: 1em;
     margin: 1em;
     background-color: aliceblue;
@@ -59,7 +59,14 @@ main {
     text-align: center;
     margin-top: .3em;
     font-weight: 600;
+    width: 100%;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
+
+/* Resource: https://stackoverflow.com/questions/486563/overflowhidden-dots-at-the-end */
 
 .movie:hover {
     color: gray;
