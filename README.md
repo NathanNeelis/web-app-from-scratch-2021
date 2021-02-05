@@ -54,6 +54,9 @@ Find a movie to your liking, and make some popcorn instead of spending minutes t
 
 <!-- ...but how does one use this project? What are its features 🤔 -->
 ### Features
+To be updated
+Probably something about searching for keywords  
+and showing popular lists of movies and tv-shows.  
 
 <!-- What external data source is featured in your project and what are its properties 🌠 -->
 ### The API
