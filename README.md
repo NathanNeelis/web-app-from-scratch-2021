@@ -57,7 +57,13 @@ Find a movie to your liking, and make some popcorn instead of spending minutes t
 
 <!-- What external data source is featured in your project and what are its properties 🌠 -->
 ### The API
-ratelimets..  
+This API contains information about movies and tv-shows.   
+You can search for movies or shows or filter on genre / collections and so on. For example, you can show the top movies at this moment.  
+
+According to the documentation there is no rate limite for this API since decembe 2019.  
+
+To find out more what this API can do, please read more on [ThemovieDB API documentation](https://developers.themoviedb.org/3/getting-started/introduction)  
+
 
 
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
