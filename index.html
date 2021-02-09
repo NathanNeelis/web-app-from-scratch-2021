@@ -15,34 +15,40 @@
 
 <body>
     <header>
-
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#tv-shows">Tv-shows</a></li>
+            </ul>
+        </nav>
     </header>
 
 
 
     <main>
 
-        <section class="search">
+        <section class="searchWrapper">
             <article class="form">
                 <label for="searchField">Search:</label>
                 <input type="text" placeholder="Search for a movie" id="searchFieldID" class="searchField">
                 <input type="submit" class="searchBtn" value="search">
                 <!-- <button id="searchBtnID" class="searchBtn">click me</button> -->
             </article>
+            <article class="searchResultsWrapper">
+                <h2>Search results</h2>
+                <div class="searchResults">
 
-        </section>
-
-
-        <section class="searchResultsWrapper">
-            <h2>Search results</h2>
-            <article class="searchResults">
-
+                </div>
             </article>
         </section>
 
 
 
-        <section>
+
+
+
+        <section class="topMovies">
             <h2>Top 20 movies</h2>
             <article class='topTwenty'>
 
@@ -55,8 +61,8 @@
     <footer>
 
     </footer>
-
-    <script src="js/app.js" defer></script>
+    <script src="js/routie.min.js"></script>
+    <script type="module" src="js/app.js"></script>
 </body>
 
 </html>

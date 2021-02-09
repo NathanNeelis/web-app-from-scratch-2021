@@ -28,6 +28,28 @@ main {
     /* margin: 1em auto; */
 }
 
+nav {
+    background-color: white;
+    width: 100vw;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+}
+
+li {
+    padding: 1em;
+}
+
+li a {
+    text-decoration: none;
+    color: gray;
+    font-family: 'Dosis', sans-serif;
+}
+
 .topTwenty {
     max-width: calc(100vw - 10em);
     min-width: 50em;
@@ -40,6 +62,14 @@ main {
     /* background-color: lightblue; */
     margin: 1em auto;
     border-radius: .5em;
+}
+
+.topMovies {
+    display: none;
+}
+
+.topMovies.active {
+    display: block;
 }
 
 .topTwenty::-webkit-scrollbar {
@@ -123,6 +153,14 @@ main {
     border-radius: .5em;
 }
 
+.searchWrapper {
+    display: none;
+}
+
+.searchWrapper.active {
+    display: block;
+}
+
 .searchResults::-webkit-scrollbar {
     background: transparent;
 }
@@ -152,6 +190,11 @@ label {
     border: none;
     /* margin: .5em; */
 
+}
+
+.searchBtn:hover {
+    background-color: gray;
+    color: white;
 }
 
 input[type=text] {
