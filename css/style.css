@@ -51,8 +51,8 @@ li a {
 }
 
 .topTwenty {
-    max-width: calc(100vw - 10em);
-    min-width: 50em;
+    max-width: calc(100vw - 20em);
+    min-width: calc(50em - 10em);
     height: 25em;
     overflow-x: scroll;
     display: flex;
@@ -66,6 +66,7 @@ li a {
 
 .topMovies {
     display: none;
+    margin-top: 1em;
 }
 
 .topMovies.active {
@@ -139,8 +140,8 @@ li a {
 
 /* Search field  */
 .searchResults {
-    max-width: calc(100vw - 10em);
-    min-width: 50em;
+    max-width: calc(100vw - 20em);
+    min-width: calc(50em - 10em);
     height: 25em;
     overflow-y: hidden;
     overflow-x: scroll;
@@ -154,6 +155,9 @@ li a {
 }
 
 .searchWrapper {
+    max-width: calc(100vw - 20em);
+    min-width: calc(50em - 10em);
+    margin: auto;
     display: none;
 }
 
@@ -198,10 +202,21 @@ label {
 }
 
 input[type=text] {
-    width: 80%;
+    width: 100%;
     border-radius: .3em;
     border: 2px solid white;
     padding: 1em;
     display: block;
     margin-right: 1em;
+}
+
+
+/* detail page  */
+.detailsMovie {
+    width: 100vw;
+    display: none;
+}
+
+.detailsMovie.active {
+    display: block;
 }

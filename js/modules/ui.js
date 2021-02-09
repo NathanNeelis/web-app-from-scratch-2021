@@ -7,6 +7,14 @@ export function updateUI(route1, route2) {
     section.forEach(section => {
         section.classList.remove('active')
     })
-    activeSectionOne.classList.add('active')
-    activeSectionTwo.classList.add('active')
+
+
+    if (route1) {
+        activeSectionOne.classList.add('active')
+    }
+
+    if (route2) {
+        activeSectionTwo.classList.add('active')
+    }
+
 }

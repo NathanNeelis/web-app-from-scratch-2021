@@ -15,9 +15,10 @@ export function updateSearch() {
     const storage = window.localStorage;
     let search = document.querySelector('.searchField').value;
     storage.setItem('searching', search)
-    console.log('this is what you are searching for:', search)
 
+    // console.log('this is what you are searching for:', search)
 
+    // fetch data from input value
     getData(search).then(data => {
         const section = document.querySelector('.searchResults');
         section.innerHTML = '';

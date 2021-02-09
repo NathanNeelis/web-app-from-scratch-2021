@@ -1,5 +1,6 @@
 import {
-    getData
+    getData,
+    getDataDetails
 } from './getdata.js';
 
 import {
@@ -26,7 +27,6 @@ export function routes() {
                 const section = document.querySelector('.topTwenty');
                 render(data, section);
                 setSearchBar();
-                // updateUI('topMovies')
             });
 
             // render searched items if in local storage
@@ -37,7 +37,7 @@ export function routes() {
             });
 
             // re-render searched items on click
-            searchButton.addEventListener("click", updateUI)
+            searchButton.addEventListener("click", updateSearch)
 
         },
         movies: () => {
@@ -49,6 +49,18 @@ export function routes() {
                 updateUI('topMovies')
             });
         },
+        'movies/:id': id => {
+            // let search = undefined;
+            getDataDetails(id).then(data => {
+                console.log('this is ID data', data)
+                const section = document.querySelector('.topTwenty');
+                render(data, section);
+                setSearchBar();
+                updateUI('topMovies')
+            });
+        }
+
+
         //#giphy/425367
         // 'gifs/:id': id => {
         //   loader('active');

@@ -1,3 +1,8 @@
+import {
+    filterObject,
+    removeGarbage
+} from './transform.js'
+
 export function getData(search) {
 
     const endpoint = 'https://api.themoviedb.org/3'; // base url
@@ -25,34 +30,31 @@ export function getData(search) {
     return fetch(url)
         .then(response => response.json())
         .then(data => filterObject(data.results))
-        .then(data => store(data))
+        .then(data => removeGarbage(data))
+        // .then(data => store(data))
         .catch(err => {
             console.log(err);
         });
 }
 
-function filterObject(results) {
-    let items = results.map((results) => {
-        return {
-            id: results.id,
-            title: results.title,
-            overview: results.overview,
-            popularity: results.popularity,
-            poster_path: results.poster_path,
-            release_date: results.release_date,
-            vote_average: results.vote_average,
-            vote_count: results.vote_count
-        }
-    });
+export function getDataDetails(id) {
 
-    return items
-}
+    const endpoint = 'https://api.themoviedb.org/3'; // base url
+    const movie = "/movie/"
+    const key = '?api_key=172dbac1b2ced3673820d2a54c969fe1'; // api key
 
-function store(data) {
-    // asynchronously store data before returning, fake it with timeout
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(data);
-        }, 1);
-    });
+    let url = endpoint + movie + id + key;
+
+    return fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            console.log('raw detail data', data)
+            return data;
+        })
+        // .then(data => filterObject(data))
+        // .then(data => removeGarbage(data))
+        // .then(data => store(data))
+        .catch(err => {
+            console.log(err);
+        });
 }
