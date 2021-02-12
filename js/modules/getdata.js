@@ -31,7 +31,6 @@ export function getData(search) {
         .then(response => response.json())
         .then(data => filterObject(data.results))
         .then(data => removeGarbage(data))
-        // .then(data => store(data))
         .catch(err => {
             console.log(err);
         });
@@ -53,7 +52,6 @@ export function getDataDetails(id) {
         })
         // .then(data => filterObject(data))
         // .then(data => removeGarbage(data))
-        // .then(data => store(data))
         .catch(err => {
             console.log(err);
         });
