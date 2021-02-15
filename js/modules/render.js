@@ -1,10 +1,12 @@
-export function render(data, section, search) {
-    renderToHtml(data, section, search);
+export function render(data, section, search, id) {
+    if (id) {
+        renderSingleObjectToHtml(data, section);
+    } else {
+        renderToHtml(data, section, search);
+    }
+
 }
 
-export function renderDetailPage(data, section) {
-    renderSingleObjectToHtml(data, section);
-}
 
 // OUTPUT HTML P ELEMENTS IN DIV ELEMENTS
 function renderToHtml(data, section, search) {

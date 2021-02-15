@@ -13,8 +13,6 @@ export function updateUI(route1, route2) {
         activeSectionTwo.classList.add('active')
     } else if (route1) {
         activeSectionOne.classList.add('active')
-    } else if (route2) {
-        activeSectionTwo.classList.add('active')
     }
 
 }

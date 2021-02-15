@@ -236,7 +236,7 @@ input[type=text] {
 
 .detailMovieImage {
     height: 100%;
-    padding: 2em;
+    /* padding: 2em; */
     border: 1rem solid coral;
     margin: 2rem;
     border-radius: .5rem;

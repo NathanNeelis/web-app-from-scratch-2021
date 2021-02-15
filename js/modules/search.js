@@ -1,10 +1,7 @@
-import {
-    getData
-} from './getdata.js';
-
-import {
-    render
-} from './render.js'
+/* beautify preserve:start */
+import { getData } from './getdata.js';
+import { render } from './render.js';
+/* beautify preserve:end */
 
 export function updateSearch() {
     // sets wrapper to show on click

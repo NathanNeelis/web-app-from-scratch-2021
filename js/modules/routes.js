@@ -1,21 +1,9 @@
-import {
-    getData,
-    getDataDetails
-} from './getdata.js';
-
-import {
-    render,
-    renderDetailPage
-} from './render.js'
-
-import {
-    updateSearch,
-    setSearchBar
-} from './search.js'
-
-import {
-    updateUI
-} from './ui.js'
+/* beautify preserve:start */
+import { getData, getDataDetails } from './getdata.js';
+import { render } from './render.js';
+import { updateSearch, setSearchBar } from './search.js';
+import { updateUI } from './ui.js';
+/* beautify preserve:end */
 
 export function routes() {
     routie({
@@ -39,20 +27,7 @@ export function routes() {
             searchButton.addEventListener("click", updateSearch)
 
         },
-        // search: () => {
-        //     let search = setSearchBar();
-        //     const searchButton = document.querySelector('.searchBtn')
-        //     // render searched items if in local storage
-        //     getData(search).then(data => {
-        //         const section = document.querySelector('.searchResults');
-        //         render(data, section, search);
-        //         updateUI('searchWrapper')
-        //     });
-        //     // re-render searched items on click
-        //     searchButton.addEventListener("click", updateSearch)
-        // },
         movies: () => {
-            // render top movies
             getData().then(data => {
                 const section = document.querySelector('.topTwenty');
                 render(data, section);
@@ -60,9 +35,10 @@ export function routes() {
             });
         },
         'movies/:id': id => {
+            let search = '';
             getDataDetails(id).then(data => {
                 const section = document.querySelector('.detailsMovie');
-                renderDetailPage(data, section);
+                render(data, section, search, id);
                 updateUI('detailsMovie')
             });
         }

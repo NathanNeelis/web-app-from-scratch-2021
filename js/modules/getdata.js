@@ -1,8 +1,6 @@
-import {
-    filterObject,
-    removeGarbage,
-    filterSingleObject
-} from './transform.js'
+/* beautify preserve:start */
+import { filterObject, removeGarbage, filterSingleObject } from './transform.js'
+/* beautify preserve:end */
 
 export function getData(search) {
 
