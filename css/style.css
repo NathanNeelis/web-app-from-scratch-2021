@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     background-color: black;
 }
@@ -75,6 +79,7 @@ li a {
 
 .topTwenty::-webkit-scrollbar {
     background: transparent;
+    height: 10px;
 }
 
 .topTwenty::-webkit-scrollbar-thumb {
@@ -167,6 +172,7 @@ li a {
 
 .searchResults::-webkit-scrollbar {
     background: transparent;
+    height: 10px;
 }
 
 .searchResults::-webkit-scrollbar-thumb {
