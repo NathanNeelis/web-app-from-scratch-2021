@@ -1,10 +1,9 @@
 export function render(data, section) {
-    section.innerHTML = '';
+    // section.innerHTML = '';
     renderToHtml(data, section);
 }
 
 export function renderDetailPage(data, section) {
-    section.innerHTML = '';
     renderSingleObjectToHtml(data, section);
 }
 

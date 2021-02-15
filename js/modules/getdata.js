@@ -38,7 +38,6 @@ export function getData(search) {
 }
 
 export function getDataDetails(id) {
-
     const endpoint = 'https://api.themoviedb.org/3'; // base url
     const movie = "/movie/"
     const key = '?api_key=172dbac1b2ced3673820d2a54c969fe1'; // api key
@@ -47,17 +46,14 @@ export function getDataDetails(id) {
 
     return fetch(url)
         .then(response => response.json())
-        .then(data => {
-            console.log('raw detail data', data)
-            return data;
-        })
         .then(data => filterSingleObject(data))
-        .then(data => {
-            console.log('filtered detail data', data)
-            return data;
-        })
-        // .then(data => removeGarbage(data))
         .catch(err => {
             console.log(err);
         });
 }
+
+
+// .then(data => {
+//     console.log('raw detail data', data)
+//     return data;
+// })
