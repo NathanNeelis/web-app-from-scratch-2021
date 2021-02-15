@@ -12,6 +12,8 @@ export function resetPage(section) {
 
 // OUTPUT HTML P ELEMENTS IN DIV ELEMENTS
 function renderToHtml(data, section) {
+    section.innerHTML = "";
+    console.log('reset page')
     for (let id in data) {
 
         // create anchor tag
