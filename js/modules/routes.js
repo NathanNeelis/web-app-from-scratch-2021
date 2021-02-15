@@ -45,7 +45,7 @@ export function routes() {
             getData().then(data => {
                 const section = document.querySelector('.topTwenty');
                 render(data, section);
-                setSearchBar();
+                // setSearchBar();
                 updateUI('topMovies')
             });
         },
