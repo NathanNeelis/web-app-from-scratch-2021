@@ -4,7 +4,8 @@ import {
 } from './getdata.js';
 
 import {
-    render
+    render,
+    renderDetailPage
 } from './render.js'
 
 import {
@@ -45,18 +46,15 @@ export function routes() {
             getData().then(data => {
                 const section = document.querySelector('.topTwenty');
                 render(data, section);
-                // setSearchBar();
                 updateUI('topMovies')
             });
         },
         'movies/:id': id => {
             // let search = undefined;
             getDataDetails(id).then(data => {
-                console.log('this is ID data', data)
-                const section = document.querySelector('.topTwenty');
-                render(data, section);
-                setSearchBar();
-                updateUI('topMovies')
+                const section = document.querySelector('.detailsMovie');
+                renderDetailPage(data, section);
+                updateUI('detailsMovie')
             });
         }
 

@@ -8,12 +8,12 @@ export function updateUI(route1, route2) {
         section.classList.remove('active')
     })
 
-
-    if (route1) {
+    if (route1 && route2) {
         activeSectionOne.classList.add('active')
-    }
-
-    if (route2) {
+        activeSectionTwo.classList.add('active')
+    } else if (route1) {
+        activeSectionOne.classList.add('active')
+    } else if (route2) {
         activeSectionTwo.classList.add('active')
     }
 

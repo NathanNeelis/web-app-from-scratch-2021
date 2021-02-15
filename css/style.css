@@ -220,3 +220,44 @@ input[type=text] {
 .detailsMovie.active {
     display: block;
 }
+
+
+.movieWrap {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* flex-direction: column; */
+}
+
+.detailMovieImage {
+    height: 100%;
+    padding: 2em;
+
+}
+
+.movieOverview {
+    color: white;
+    padding: 2em;
+    width: 60vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.voteAverage {
+    width: 4rem;
+    height: 4rem;
+    background-color: coral;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 20%;
+    right: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+}

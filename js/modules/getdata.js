@@ -1,6 +1,7 @@
 import {
     filterObject,
-    removeGarbage
+    removeGarbage,
+    filterSingleObject
 } from './transform.js'
 
 export function getData(search) {
@@ -50,7 +51,11 @@ export function getDataDetails(id) {
             console.log('raw detail data', data)
             return data;
         })
-        // .then(data => filterObject(data))
+        .then(data => filterSingleObject(data))
+        .then(data => {
+            console.log('filtered detail data', data)
+            return data;
+        })
         // .then(data => removeGarbage(data))
         .catch(err => {
             console.log(err);
