@@ -12,10 +12,7 @@ export function resetPage(section) {
 
 // OUTPUT HTML P ELEMENTS IN DIV ELEMENTS
 function renderToHtml(data, section) {
-    section.innerHTML = "";
-    console.log('reset page')
     for (let id in data) {
-
         // create anchor tag
         let anchorTag = document.createElement('a');
         anchorTag.setAttribute('href', '#movies/' + data[id].id);
@@ -40,9 +37,8 @@ function renderToHtml(data, section) {
 
         // append 
         section.appendChild(anchorTag)
-        anchorTag.appendChild(newElement); // appends the divs to the section
-        document.getElementById(data[id].title).appendChild(imageWrap).appendChild(movieImages);
-        document.getElementById(data[id].title).appendChild(heading); // appends the paragraphs to the right divs
+        anchorTag.appendChild(newElement).appendChild(imageWrap).appendChild(movieImages); // appends the divs to the section
+        anchorTag.appendChild(newElement).appendChild(heading);
     }
 }
 
@@ -81,12 +77,9 @@ function renderSingleObjectToHtml(data, section) {
 
 
     // append 
-    // section.appendChild(newElement); // appends the divs to the section
-    // section.appendChild(movieImages);
     section.appendChild(imageWrap).appendChild(movieImages);
     section.appendChild(imageWrap).appendChild(voteAverage)
     section.appendChild(heading);
     section.appendChild(overview);
     section.appendChild(releaseData);
-    // section.appendChild(voteAverage);
 }

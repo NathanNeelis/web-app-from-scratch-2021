@@ -58,33 +58,19 @@ export function routes() {
 
         },
         movies: () => {
-            resetPage(document.querySelector('.topTwenty'))
-            console.log('reset pages')
             // render top movies
             getData().then(data => {
                 const section = document.querySelector('.topTwenty');
-                // resetPage(section)
                 render(data, section);
                 updateUI('topMovies')
             });
         },
         'movies/:id': id => {
-            // let search = undefined;
             getDataDetails(id).then(data => {
                 const section = document.querySelector('.detailsMovie');
                 renderDetailPage(data, section);
                 updateUI('detailsMovie')
             });
         }
-
-
-        //#giphy/425367
-        // 'gifs/:id': id => {
-        //   loader('active');
-        //   getData(id).then(data => {
-        //     render(data, id);
-        //     updateUI('giphy');
-        //   });
-        // }
     });
 }
