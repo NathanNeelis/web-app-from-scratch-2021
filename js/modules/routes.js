@@ -5,8 +5,7 @@ import {
 
 import {
     render,
-    renderDetailPage,
-    resetPage
+    renderDetailPage
 } from './render.js'
 
 import {
@@ -24,17 +23,15 @@ export function routes() {
             let search = setSearchBar();
             const searchButton = document.querySelector('.searchBtn')
 
-            // render top movies
             getData().then(data => {
                 const section = document.querySelector('.topTwenty');
                 render(data, section);
-                setSearchBar();
             });
 
             // render searched items if in local storage
             getData(search).then(data => {
                 const section = document.querySelector('.searchResults');
-                render(data, section);
+                render(data, section, search);
                 updateUI('searchWrapper', 'topMovies')
             });
 
@@ -42,21 +39,18 @@ export function routes() {
             searchButton.addEventListener("click", updateSearch)
 
         },
-        search: () => {
-            let search = setSearchBar();
-            const searchButton = document.querySelector('.searchBtn')
-
-            // render searched items if in local storage
-            getData(search).then(data => {
-                const section = document.querySelector('.searchResults');
-                render(data, section);
-                updateUI('searchWrapper')
-            });
-
-            // re-render searched items on click
-            searchButton.addEventListener("click", updateSearch)
-
-        },
+        // search: () => {
+        //     let search = setSearchBar();
+        //     const searchButton = document.querySelector('.searchBtn')
+        //     // render searched items if in local storage
+        //     getData(search).then(data => {
+        //         const section = document.querySelector('.searchResults');
+        //         render(data, section, search);
+        //         updateUI('searchWrapper')
+        //     });
+        //     // re-render searched items on click
+        //     searchButton.addEventListener("click", updateSearch)
+        // },
         movies: () => {
             // render top movies
             getData().then(data => {

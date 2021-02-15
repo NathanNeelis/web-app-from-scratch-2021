@@ -22,7 +22,7 @@ export function updateSearch() {
     getData(search).then(data => {
         const section = document.querySelector('.searchResults');
         section.innerHTML = '';
-        render(data, section);
+        render(data, section, search);
     });
 }
 

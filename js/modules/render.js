@@ -1,17 +1,18 @@
-export function render(data, section) {
-    renderToHtml(data, section);
+export function render(data, section, search) {
+    renderToHtml(data, section, search);
 }
 
 export function renderDetailPage(data, section) {
     renderSingleObjectToHtml(data, section);
 }
 
-export function resetPage(section) {
-    section.innerHTML = "";
-}
-
 // OUTPUT HTML P ELEMENTS IN DIV ELEMENTS
-function renderToHtml(data, section) {
+function renderToHtml(data, section, search) {
+    if (search) {
+        const article = document.querySelector('.searchHeading');
+        article.textContent = 'Search results for ' + search;
+    }
+
     for (let id in data) {
         // create anchor tag
         let anchorTag = document.createElement('a');
@@ -34,6 +35,7 @@ function renderToHtml(data, section) {
         // Create IMG element
         let movieImages = document.createElement("img");
         movieImages.src = 'https://image.tmdb.org/t/p/w200' + data[id].poster_path;
+
 
         // append 
         section.appendChild(anchorTag)
