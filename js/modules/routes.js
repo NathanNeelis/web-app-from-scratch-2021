@@ -42,6 +42,21 @@ export function routes() {
             searchButton.addEventListener("click", updateSearch)
 
         },
+        search: () => {
+            let search = setSearchBar();
+            const searchButton = document.querySelector('.searchBtn')
+
+            // render searched items if in local storage
+            getData(search).then(data => {
+                const section = document.querySelector('.searchResults');
+                render(data, section);
+                updateUI('searchWrapper', 'topMovies')
+            });
+
+            // re-render searched items on click
+            searchButton.addEventListener("click", updateSearch)
+
+        },
         movies: () => {
             // render top movies
             getData().then(data => {
