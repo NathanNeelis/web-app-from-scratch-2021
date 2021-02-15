@@ -1,10 +1,13 @@
 export function render(data, section) {
-    // section.innerHTML = '';
     renderToHtml(data, section);
 }
 
 export function renderDetailPage(data, section) {
     renderSingleObjectToHtml(data, section);
+}
+
+export function resetPage(section) {
+    section.innerHTML = "";
 }
 
 // OUTPUT HTML P ELEMENTS IN DIV ELEMENTS

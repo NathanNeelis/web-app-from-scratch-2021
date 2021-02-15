@@ -5,7 +5,8 @@ import {
 
 import {
     render,
-    renderDetailPage
+    renderDetailPage,
+    resetPage
 } from './render.js'
 
 import {
@@ -45,6 +46,7 @@ export function routes() {
             // render top movies
             getData().then(data => {
                 const section = document.querySelector('.topTwenty');
+                resetPage(section)
                 render(data, section);
                 updateUI('topMovies')
             });
