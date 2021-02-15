@@ -50,7 +50,7 @@ export function routes() {
             getData(search).then(data => {
                 const section = document.querySelector('.searchResults');
                 render(data, section);
-                updateUI('searchWrapper', 'topMovies')
+                updateUI('searchWrapper')
             });
 
             // re-render searched items on click
