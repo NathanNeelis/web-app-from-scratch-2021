@@ -50,12 +50,6 @@ function renderToHtml(data, section) {
 // OUTPUT HTML P ELEMENTS IN DIV ELEMENTS
 function renderSingleObjectToHtml(data, section) {
 
-    // // create DIV
-    // let newElement = document.createElement('div'); // creates a div
-    // newElement.id = data.title; // gives all divs an id with the name of the movie 
-    // newElement.className = "detailPageMovie"; // gives all divs a class of movie
-
-
     // Create IMG element
     let movieImages = document.createElement("img");
     movieImages.src = 'https://image.tmdb.org/t/p/w200' + data.poster_path;

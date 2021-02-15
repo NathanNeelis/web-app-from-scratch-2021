@@ -58,6 +58,8 @@ export function routes() {
 
         },
         movies: () => {
+            resetPage(document.querySelector('.topTwenty'))
+            console.log('reset pages')
             // render top movies
             getData().then(data => {
                 const section = document.querySelector('.topTwenty');
