@@ -1,5 +1,6 @@
 export function render(data, section, search, id) {
     if (id) {
+        section.innerHTML = '';
         renderSingleObjectToHtml(data, section);
     } else {
         section.innerHTML = '';

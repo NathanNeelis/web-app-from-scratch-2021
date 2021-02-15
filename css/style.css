@@ -54,7 +54,8 @@ li a {
     font-family: 'Dosis', sans-serif;
 }
 
-.topTwenty {
+.topTwenty,
+.viewedMovies {
     max-width: calc(100vw - 20em);
     min-width: calc(50em - 10em);
     height: 25em;
@@ -73,16 +74,27 @@ li a {
     margin-top: 1em;
 }
 
+.recentlyViewed {
+    display: none;
+    margin-top: 1em;
+}
+
+.recentlyViewed.active {
+    display: block;
+}
+
 .topMovies.active {
     display: block;
 }
 
-.topTwenty::-webkit-scrollbar {
+.topTwenty::-webkit-scrollbar,
+.viewedMovies::-webkit-scrollbar {
     background: transparent;
     height: 10px;
 }
 
-.topTwenty::-webkit-scrollbar-thumb {
+.topTwenty::-webkit-scrollbar-thumb,
+.viewedMovies::-webkit-scrollbar-thumb {
     background: white;
     border-radius: .5em;
 }

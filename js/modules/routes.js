@@ -1,7 +1,7 @@
 /* beautify preserve:start */
 import { getData, getDataDetails } from './getdata.js';
 import { render } from './render.js';
-import { updateSearch, setSearchBar } from './search.js';
+import { updateSearch, setSearchBar, saveMovieInArray } from './search.js';
 import { updateUI } from './ui.js';
 /* beautify preserve:end */
 
@@ -28,11 +28,17 @@ export function routes() {
 
         },
         movies: () => {
+            let storageValue = JSON.parse(localStorage.getItem('viewedMovies'));
+            const section = document.querySelector('.viewedMovies');
+            render(storageValue, section)
+
+
             getData().then(data => {
                 const section = document.querySelector('.topTwenty');
                 render(data, section);
-                updateUI('topMovies')
+                updateUI('topMovies', 'recentlyViewed')
             });
+
         },
         'movies/:id': id => {
             let search = '';
@@ -40,6 +46,7 @@ export function routes() {
                 const section = document.querySelector('.detailsMovie');
                 render(data, section, search, id);
                 updateUI('detailsMovie')
+                saveMovieInArray(data);
             });
         }
     });
