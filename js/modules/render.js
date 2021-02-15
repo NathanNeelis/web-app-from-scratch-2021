@@ -2,6 +2,7 @@ export function render(data, section, search, id) {
     if (id) {
         renderSingleObjectToHtml(data, section);
     } else {
+        section.innerHTML = '';
         renderToHtml(data, section, search);
     }
 
