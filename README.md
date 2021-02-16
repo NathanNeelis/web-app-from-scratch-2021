@@ -129,7 +129,7 @@ To find out more what this API can do, please read more on [ThemovieDB API docum
 <details>
   <summary>Example multiple data file</summary>
   
- ```javascript
+ ```json
 {
     "page": 1,
     "results": [{
