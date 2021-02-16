@@ -1,19 +1,13 @@
-<!-- Add a link to your live demo in Github Pages 🌐-->
 ### View the app
 :earth_americas:  [live website](https://nathanneelis.github.io/web-app-from-scratch-2021/)
 
-<!-- ☝️ replace this description with a description of your own work -->
 ### Description
 Do you also spend too much time looking for a decent movie to watch?  
-With this application you can see right away what the top movies are at this very moment! 
-Find a movie to your liking, and make some popcorn instead of spending minutes to find a good title.  
+With this application you can see right away what the top movies are at this very moment! Find a movie to your liking, and make some popcorn instead of spending minutes to find a good title.  
 
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
-
--- image / poster app --  
+![front](https://user-images.githubusercontent.com/55492381/108067430-0e5c4a00-7061-11eb-965b-e54dd2edcb15.png)
 
 
-<!-- Maybe a table of contents here? 📚 -->
 ### Table of Contents
 [Description]()  
 [Getting started]()  
@@ -24,7 +18,6 @@ Find a movie to your liking, and make some popcorn instead of spending minutes t
 [Resources]()   
 
 
-<!-- How about a section that describes how to install this project? 🤓 -->
 ### Getting started
 
 #### Cloning the repo
@@ -54,9 +47,13 @@ Find a movie to your liking, and make some popcorn instead of spending minutes t
 
 <!-- ...but how does one use this project? What are its features 🤔 -->
 ### Features
-To be updated
-Probably something about searching for keywords  
-and showing popular lists of movies and tv-shows.  
+*Search for a movie*  
+You can search for your favorite movie.  
+![search](https://user-images.githubusercontent.com/55492381/108068657-a870c200-7062-11eb-9323-cce1a340ac02.gif)  
+
+*Recently viewed movies section*  
+Everytime you view de detailpage of a movie, it gets added to the recently added movies. Up to 10 movies in total! The latest infront of the row.  
+![recentlyviewed](https://user-images.githubusercontent.com/55492381/108068872-f38ad500-7062-11eb-88f4-61b212a1713e.gif)  
 
 <!-- What external data source is featured in your project and what are its properties 🌠 -->
 ### The API
@@ -71,7 +68,7 @@ To find out more what this API can do, please read more on [ThemovieDB API docum
 <details>
   <summary>Example single data file</summary>
   
- ```javascript
+ ```json
 {
     "adult": false,
     "backdrop_path": null,
