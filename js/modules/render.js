@@ -6,7 +6,11 @@ export function render(data, section, search, id) {
         section.innerHTML = '';
         renderToHtml(data, section, search);
     }
+}
 
+export function renderBackground(data, section) {
+    section.innerHTML = '';
+    renderImagesToBackground(data, section);
 }
 
 
@@ -49,7 +53,7 @@ function renderToHtml(data, section, search) {
 }
 
 
-// OUTPUT HTML P ELEMENTS IN DIV ELEMENTS
+
 function renderSingleObjectToHtml(data, section) {
 
     // Create IMG element
@@ -88,4 +92,23 @@ function renderSingleObjectToHtml(data, section) {
     section.appendChild(heading);
     section.appendChild(overview);
     section.appendChild(releaseData);
+}
+
+
+function renderImagesToBackground(data, section) {
+    for (let id in data) {
+
+        // create DIV
+        let imageWrap = document.createElement('div'); // creates a div
+        imageWrap.id = data[id].title; // gives all divs an id with the name of the movie 
+        imageWrap.className = "movieBgWrap"; // gives all divs a class of movie
+
+        // Create IMG element
+        let movieImages = document.createElement("img");
+        movieImages.src = 'https://image.tmdb.org/t/p/w200' + data[id].poster_path;
+
+
+        // append 
+        section.appendChild(imageWrap).appendChild(movieImages);
+    }
 }

@@ -18,7 +18,7 @@
         <nav>
             <ul>
                 <li><a href="">Home</a></li>
-                <!-- <li><a href="#search">Search</a></li> -->
+                <li><a href="#search">Search</a></li>
                 <li><a href="#movies">Movies</a></li>
             </ul>
         </nav>
@@ -28,20 +28,29 @@
 
     <main>
 
+        <section class="intro">
+            <article class="formWrap">
+                <div class="formIntro">
+                    <label for="searchField">Search:</label>
+                    <input type="text" placeholder="Search for a movie" class="searchFieldIntro">
+                    <input type="submit" class="searchBtnIntro" value="search" onclick="location.href='#search';">
+                </div>
+            </article>
+            <article class="background">
+
+            </article>
+
+        </section>
+
 
         <section class="topMovies">
-            <h2>Top 20 movies</h2>
+            <h2>Top movies</h2>
             <article class='topTwenty'>
 
             </article>
         </section>
 
-        <section class="recentlyViewed">
-            <h2>Recently Viewed movies</h2>
-            <article class='viewedMovies'>
 
-            </article>
-        </section>
 
         <section class="searchWrapper">
             <article class="form">
@@ -62,6 +71,13 @@
 
 
         <section class="detailsMovie">
+        </section>
+
+        <section class="recentlyViewed">
+            <h2>Recently Viewed movies</h2>
+            <article class='viewedMovies'>
+
+            </article>
         </section>
     </main>
 

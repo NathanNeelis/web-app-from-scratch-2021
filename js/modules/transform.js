@@ -1,4 +1,4 @@
-export function filterObject(results) {
+function filterObject(results) {
     let items = results.map((results) => {
         return {
             id: results.id,
@@ -15,7 +15,7 @@ export function filterObject(results) {
     return items
 }
 
-export function filterSingleObject(results) {
+function filterSingleObject(results) {
     return {
         id: results.id,
         title: results.title,
@@ -29,7 +29,7 @@ export function filterSingleObject(results) {
 }
 
 
-export function removeGarbage(data) {
+function removeGarbage(data) {
     let items = data.filter(function (items) {
         return items.poster_path != undefined;
     })
@@ -37,3 +37,36 @@ export function removeGarbage(data) {
 }
 
 // Resource filter (recap): FUN FUN FUNCTION https://www.youtube.com/watch?v=BMUiFMZr7vk 
+
+
+function checkForDoubles(movie) {
+    const uniqueArray = movie.filter((value, index) => {
+        const keys = JSON.stringify(value);
+        return index === movie.findIndex(obj => {
+            return JSON.stringify(obj) === keys;
+        });
+    });
+
+    return uniqueArray;
+
+    // Thanks to Eydrian @ stackoverflow
+    // Resource: https://stackoverflow.com/questions/2218999/remove-duplicates-from-an-array-of-objects-in-javascript
+
+}
+
+function arrayLimited(data) {
+    let limitedArray = data;
+    if (limitedArray.length > 10) {
+        limitedArray.pop();
+    }
+    return limitedArray;
+}
+
+
+export {
+    arrayLimited,
+    checkForDoubles,
+    removeGarbage,
+    filterSingleObject,
+    filterObject
+}
