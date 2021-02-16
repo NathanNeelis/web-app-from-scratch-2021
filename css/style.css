@@ -52,6 +52,11 @@ li a {
     font-family: 'Dosis', sans-serif;
 }
 
+li a:hover {
+    color: coral;
+}
+
+
 section a {
     text-decoration: none;
 }
@@ -83,13 +88,18 @@ section a {
 .viewedMovies {
     width: min(70vw, 60em);
     display: grid;
+    overflow-x: scroll;
     /* grid-template-columns: repeat(10, 10%); */
-    grid-template-columns: repeat(auto-fit, 15%);
+    grid-template-columns: repeat(10, 15%);
     justify-self: center;
     /* justify-items: center; */
     column-gap: .5rem;
+    row-gap: .5rem;
     margin: 0 auto;
+    padding-bottom: 1em;
 }
+
+
 
 .topMovies {
     display: none;
@@ -203,6 +213,7 @@ section a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3rem;
 }
 
 .searchResults a {
@@ -257,7 +268,8 @@ label {
 
 }
 
-.searchBtn:hover {
+.searchBtn:hover,
+.searchBtnIntro:hover {
     color: coral;
 }
 
@@ -351,8 +363,6 @@ input[type=text] {
     grid-template-rows: repeat(auto-fit, minmax(25%, 1fr));
     justify-items: stretch;
     opacity: .2;
-
-
 }
 
 .movieBgWrap img {
@@ -380,4 +390,12 @@ input[type=text] {
     padding: 1em;
     border-radius: .5em;
     box-shadow: 0px 0px 28px -2px coral;
+}
+
+.viewedMovies h4 {
+    font-size: .7em;
+}
+
+.viewedMovies .movie {
+    padding: .5rem;
 }

@@ -18,6 +18,12 @@ With this application you can see right away what the top movies are at this ver
 [Resources]()   
 
 
+### Actor diagram
+![ActorDiagram](https://user-images.githubusercontent.com/55492381/108078662-3dc58380-706e-11eb-951f-0c4d568a50de.jpg)  
+
+### Interaction diagram
+![interaction-diagram](https://user-images.githubusercontent.com/55492381/108078669-3f8f4700-706e-11eb-89df-568dffea5b93.jpg)  
+
 ### Getting started
 
 #### Cloning the repo
@@ -44,18 +50,16 @@ With this application you can see right away what the top movies are at this ver
     ```https://github.com/NathanNeelis/web-app-from-scratch-2021/archive/master.zip```
 
 
-
-<!-- ...but how does one use this project? What are its features 🤔 -->
 ### Features
-_Search for a movie_  
+**Search for a movie**  
 You can search for your favorite movie.  
 ![search](https://user-images.githubusercontent.com/55492381/108068657-a870c200-7062-11eb-9323-cce1a340ac02.gif)  
 
-*Recently viewed movies section*  
+**Recently viewed movies section**  
 Everytime you view de detailpage of a movie, it gets added to the recently added movies. Up to 10 movies in total! The latest infront of the row.  
 ![recentlyviewed](https://user-images.githubusercontent.com/55492381/108068872-f38ad500-7062-11eb-88f4-61b212a1713e.gif)  
 
-<!-- What external data source is featured in your project and what are its properties 🌠 -->
+
 ### The API
 This API contains information about movies and tv-shows.   
 You can search for movies or shows or filter on genre / collections and so on. For example, you can show the top movies at this moment.  
@@ -623,7 +627,6 @@ To find out more what this API can do, please read more on [ThemovieDB API docum
 * ❌  templating  
 
 
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
 ### License
 [MIT](https://github.com/NathanNeelis/web-app-from-scratch-2021/blob/master/LICENSE)  
 
@@ -633,3 +636,4 @@ To find out more what this API can do, please read more on [ThemovieDB API docum
 * [Local Storage storing & retieving](https://coderwall.com/p/ewxn9g/storing-and-retrieving-objects-with-localstorage-html5)  
 * [Modules / routing / fetching example](https://github.com/cmda-minor-web/web-app-from-scratch-2021/tree/master/examples/modules)  
 * [Actor & Interaction diagrams](https://docs.google.com/document/d/1445IOuXNTlCki89WkGSZxwJoxbHkdzuFgp53KCC9WOc/edit)  
+* [GRID](https://css-tricks.com/snippets/css/complete-guide-grid/)  

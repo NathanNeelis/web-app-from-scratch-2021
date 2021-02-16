@@ -39,7 +39,7 @@ export function routes() {
             const section = document.querySelector('.viewedMovies');
             render(storageValue, section)
 
-            // top movies
+            // top moviesh
             getData().then(data => {
                 const section = document.querySelector('.topTwenty');
                 render(data, section);

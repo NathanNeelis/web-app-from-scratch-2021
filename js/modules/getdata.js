@@ -2,7 +2,7 @@
 import { filterObject, removeGarbage, filterSingleObject } from './transform.js'
 /* beautify preserve:end */
 
-export function getData(search) {
+function getData(search) {
 
     const endpoint = 'https://api.themoviedb.org/3'; // base url
 
@@ -35,7 +35,7 @@ export function getData(search) {
         });
 }
 
-export function getDataDetails(id) {
+function getDataDetails(id) {
     const endpoint = 'https://api.themoviedb.org/3'; // base url
     const movie = "/movie/"
     const key = '?api_key=172dbac1b2ced3673820d2a54c969fe1'; // api key
@@ -50,8 +50,6 @@ export function getDataDetails(id) {
         });
 }
 
-
-// .then(data => {
-//     console.log('raw detail data', data)
-//     return data;
-// })
+/* beautify preserve:start */
+export { getDataDetails, getData }
+/* beautify preserve:end */

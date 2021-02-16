@@ -62,11 +62,6 @@ function arrayLimited(data) {
     return limitedArray;
 }
 
-
-export {
-    arrayLimited,
-    checkForDoubles,
-    removeGarbage,
-    filterSingleObject,
-    filterObject
-}
+/* beautify preserve:start */
+export { arrayLimited, checkForDoubles, removeGarbage, filterSingleObject, filterObject }
+/* beautify preserve:end */
