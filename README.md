@@ -47,7 +47,7 @@ With this application you can see right away what the top movies are at this ver
 
 <!-- ...but how does one use this project? What are its features 🤔 -->
 ### Features
-*Search for a movie*  
+_Search for a movie_  
 You can search for your favorite movie.  
 ![search](https://user-images.githubusercontent.com/55492381/108068657-a870c200-7062-11eb-9323-cce1a340ac02.gif)  
 
