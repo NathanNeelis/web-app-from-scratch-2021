@@ -8,7 +8,6 @@ import { updateUI } from './ui.js';
 export function routes() {
     routie({
         "": () => {
-            // let search = setSearchBar();
             const searchButton = document.querySelector('.searchBtnIntro')
 
             getData().then(data => {

@@ -759,3 +759,5 @@ function getData(search) {
 * [Modules / routing / fetching example](https://github.com/cmda-minor-web/web-app-from-scratch-2021/tree/master/examples/modules)  
 * [Actor & Interaction diagrams](https://docs.google.com/document/d/1445IOuXNTlCki89WkGSZxwJoxbHkdzuFgp53KCC9WOc/edit)  
 * [GRID](https://css-tricks.com/snippets/css/complete-guide-grid/)  
+* [The MovieDB API Getting started](https://developers.themoviedb.org/3/getting-started/introduction)  
+* [Best practices](https://github.com/cmda-minor-web/best-practices/blob/master/javascript.md)  
