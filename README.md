@@ -9,16 +9,16 @@ With this application you can see right away what the top movies are at this ver
 
 
 ### Table of Contents
-[Description]()  
-[Actor diagram]()  
-[Interaction diagram]()  
-[Getting started]()  
-[Features]()  
-[API]()  
-[Project status]()  
-[Refactoring]()  
-[License]()  
-[Resources]()   
+[Description](https://github.com/NathanNeelis/web-app-from-scratch-2021#description)  
+[Actor diagram](https://github.com/NathanNeelis/web-app-from-scratch-2021#actor-diagram)  
+[Interaction diagram](https://github.com/NathanNeelis/web-app-from-scratch-2021#interaction-diagram)  
+[Getting started](https://github.com/NathanNeelis/web-app-from-scratch-2021#getting-started)  
+[Features](https://github.com/NathanNeelis/web-app-from-scratch-2021#features)  
+[API](https://github.com/NathanNeelis/web-app-from-scratch-2021#the-api)  
+[Project status](https://github.com/NathanNeelis/web-app-from-scratch-2021#project-status)  
+[Refactoring](https://github.com/NathanNeelis/web-app-from-scratch-2021#refactoring)  
+[License](https://github.com/NathanNeelis/web-app-from-scratch-2021#license)  
+[Resources](https://github.com/NathanNeelis/web-app-from-scratch-2021#resources)   
 
 
 ### Actor diagram
