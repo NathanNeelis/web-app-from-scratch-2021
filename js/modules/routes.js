@@ -8,41 +8,41 @@ import { updateUI } from './ui.js';
 export function routes() {
     routie({
         "": () => {
-            const searchButton = document.querySelector('.searchBtnIntro')
+            const searchButton = document.querySelector('.searchBtnIntro');
 
             getData().then(data => {
                 const section = document.querySelector('.background');
                 renderBackground(data, section);
-                updateUI('intro')
+                updateUI('intro');
             });
 
-            searchButton.addEventListener("click", updateSearchIntro)
+            searchButton.addEventListener("click", updateSearchIntro);
         },
         search: () => {
             let search = setSearchBar();
-            const searchButton = document.querySelector('.searchBtn')
+            const searchButton = document.querySelector('.searchBtn');
 
             // render searched items if in local storage
             getData(search).then(data => {
                 const section = document.querySelector('.searchResults');
                 render(data, section, search);
-                updateUI('searchWrapper')
+                updateUI('searchWrapper');
             });
 
             // re-render searched items on click
-            searchButton.addEventListener("click", updateSearch)
+            searchButton.addEventListener("click", updateSearch);
         },
         movies: () => {
             // Recently viewed movies
             let storageValue = JSON.parse(localStorage.getItem('viewedMovies'));
             const section = document.querySelector('.viewedMovies');
-            render(storageValue, section)
+            render(storageValue, section);
 
             // top moviesh
             getData().then(data => {
                 const section = document.querySelector('.topTwenty');
                 render(data, section);
-                updateUI('topMovies', 'recentlyViewed')
+                updateUI('topMovies', 'recentlyViewed');
             });
 
         },
@@ -51,13 +51,13 @@ export function routes() {
             // Recently viewed movies
             let storageValue = JSON.parse(localStorage.getItem('viewedMovies'));
             const section = document.querySelector('.viewedMovies');
-            render(storageValue, section)
+            render(storageValue, section);
 
             // movie details
             getDataDetails(id).then(data => {
                 const section = document.querySelector('.detailsMovie');
                 render(data, section, search, id);
-                updateUI('detailsMovie', 'recentlyViewed')
+                updateUI('detailsMovie', 'recentlyViewed');
                 saveMovieInArray(data);
             });
         }

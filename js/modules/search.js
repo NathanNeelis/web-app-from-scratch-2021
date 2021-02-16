@@ -23,10 +23,6 @@ function updateSearch() {
 }
 
 function updateSearchIntro() {
-    // sets wrapper to show on click
-    const wrapper = document.querySelector('.searchResultsWrapper');
-    wrapper.classList.remove('hide');
-
     // saving input in local storage
     const storage = window.localStorage;
     let search = document.querySelector('.searchFieldIntro').value;
@@ -43,7 +39,7 @@ function updateSearchIntro() {
 // set searchbar with latest search item
 function setSearchBar() {
     // checks the local storage and updates the input field with the value
-    let storageValue = localStorage.getItem('searching')
+    let storageValue = localStorage.getItem('searching');
     let search = document.querySelector('.searchField');
     search.value = storageValue;
 
@@ -65,7 +61,7 @@ function saveMovieInArray(data) {
     const storage = window.localStorage;
 
     let movie = [];
-    let oldMovies = JSON.parse(storage.getItem("viewedMovies") || "[]");
+    let oldMovies = JSON.parse(storage.getItem('viewedMovies') || '[]');
     let new_movie = data;
 
     movie = [...oldMovies];
