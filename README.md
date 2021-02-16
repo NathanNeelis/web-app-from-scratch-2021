@@ -10,10 +10,13 @@ With this application you can see right away what the top movies are at this ver
 
 ### Table of Contents
 [Description]()  
+[Actor diagram]()  
+[Interaction diagram]()  
 [Getting started]()  
 [Features]()  
 [API]()  
 [Project status]()  
+[Refactoring]()  
 [License]()  
 [Resources]()   
 
@@ -625,6 +628,125 @@ To find out more what this API can do, please read more on [ThemovieDB API docum
 * ✅  Modulair coding  
 
 * ❌  templating  
+
+### Refactoring
+I refactored my data fetch. The first time I refactored the waterfall on the data-fetch. The second time the improvement is that I dont use global variables anymore and then I now return a promise instead of the data. The MovieDB database however uses different fetching URL's for different kinds of data. This was kind of a challange in the refactored way. The switch between popular movies and movies based on a search query was solved by using an if statement. But for the detail page I had to create a second data-fetch function.
+
+<details>
+  <summary>Fetching data - the old way</summary>
+  
+ ```javascript
+async function defaultSearch() {
+    // selection section to render html
+    const section = document.querySelector('.searchResults');
+
+    // storage value
+    let storageValue = localStorage.getItem('searching')
+
+    // checkForStorage(storageValue, section);
+    checkForStorage(storageValue);
+
+    getData(urlSearch + storageValue)
+        .then(data => {
+
+            // function(s) to transform data  
+            let cleanObject = filterObject(data)
+
+            console.log(data)
+
+            // function(s) to render data
+            setSearchBar(); // Sets local storage item in search bar
+            section.innerHTML = ''; // remove existing HTML
+            renderToHtml(cleanObject, section) // renders the top movies
+        });
+}
+ ```
+</details>
+
+<details>
+  <summary>Fetching data - refactored first</summary>
+  
+ ```javascript
+// endpoint themoviedb -> top 20 most popular movies
+const endpoint = 'https://api.themoviedb.org/3'; // base url
+
+// endpoint variables
+const discover = "/discover"
+const search = "/search"
+const movie = "/movie?"
+const key = 'someKey'; // api key
+const language = '&language=en-US'; // language
+const adult = '&include_adult=false';
+const sort = '&sort_by=popularity.desc'; // sort by popularity
+const page = '&page=1'; // page 1/500
+const preSearch = '&query=';
+
+// API URLS
+const urlTopMovies = endpoint + discover + movie + key + language + sort + page;
+const urlSearch = endpoint + search + movie + key + language + adult + preSearch;
+
+
+
+// render page 
+defaultSearch()
+
+// get input value
+async function defaultSearch() {
+    // check for storage
+    let storageValue = localStorage.getItem('searching')
+    checkForStorage(storageValue)
+
+    // get the data
+    const data = filterObject(await getData(urlSearch + storageValue));
+    console.log('this is search data', data)
+
+    // render
+    const section = document.querySelector('.searchResults');
+    section.innerHTML = '';
+    renderToHtml(data, section);
+    setSearchBar();
+}
+ ```
+</details>
+
+<details>
+  <summary>Fetching data - refactored def</summary>
+  
+ ```javascript
+function getData(search) {
+
+    const endpoint = 'https://api.themoviedb.org/3'; // base url
+
+    // endpoint variables
+    const discover = "/discover"
+    const searching = "/search"
+    const movie = "/movie?"
+    const key = 'someKey'; // api key
+    const language = '&language=en-US'; // language
+    const adult = '&include_adult=false';
+    const sort = '&sort_by=popularity.desc'; // sort by popularity
+    const page = '&page=1'; // page 1/500
+    const preSearch = '&query=';
+
+    let url = '';
+
+    if (search) {
+        url = endpoint + searching + movie + key + language + adult + preSearch + search;
+    } else {
+        url = endpoint + discover + movie + key + language + sort + page;
+    }
+
+
+    return fetch(url)
+        .then(response => response.json())
+        .then(data => filterObject(data.results))
+        .then(data => removeGarbage(data))
+        .catch(err => {
+            console.log(err);
+        });
+}
+ ```
+</details>
 
 
 ### License
